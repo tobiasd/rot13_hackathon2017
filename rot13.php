@@ -27,7 +27,12 @@ function rot13_unistall() {
 /**
  * @brief add a checkbox to use the ROT13 to the ACL dialog
  **/
-function rot13_jot_networks() {
+function rot13_jot_networks(&$a, &$b) {
+	if(! local_user())
+		return;
+
+	$b .= '<div class="profile-jot-net"><input type="checkbox" name="rot13_enable" value="1" /> '
+			. t('Apply ROT13 to posting') . '</div>';
 }
 /**
  * @brief apply ROT13 to a locally made posting
