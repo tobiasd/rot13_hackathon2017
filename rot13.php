@@ -37,5 +37,21 @@ function rot13_jot_networks(&$a, &$b) {
 /**
  * @brief apply ROT13 to a locally made posting
  **/
-function rot13_post_local() {
+function rot13_post_local(&$a, &$b) {
+
+	// Don't do anything if the posting is edited
+	if ($b['edit']) {
+		return;
+	}
+
+	// only do something if the user is logged in and is the owner of the posting
+	if (!local_user() || (local_user() != $b['uid'])) {
+		return;
+	}
+
+	$rot13_enable = (($rot13_post && x($_REQUEST, 'rot13_enable')) ? intval($_REQUEST['rot13_enable']) : 0);
+
+	if (!$rot13_enable) {
+		return;
+	}
 }
