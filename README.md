@@ -8,6 +8,9 @@ The purpose of this addon is to apply the [rot13](https://en.wikipedia.org/wiki/
 This has nothing to do with security.
 It is just something for fun.
 
+Applying ROT13 to a posting in this way will interfere with remdering of BBCode elements in the postings.
+Also, as ROT13 is only applied to a certain set of characters (US ASCII) some characters will remain as they are (e.g. special characters or German umlaute).
+
 Author
 -------
 
