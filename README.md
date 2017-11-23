@@ -4,10 +4,19 @@ rot13 addmon for Friendica
 **Do not use this addon for anythin serious!**
 It is only meant as demonstration for how to write an addon for Friendica.
 
+The purpose of this addon is to apply the [rot13](https://en.wikipedia.org/wiki/ROT13) substitution code to aa send posting, if activated.
+This has nothing to do with security.
+It is just something for fun.
+
 Author
 -------
 
 * Tobias Diekershoff <tobias.diekershoff(at)gmx.net>
+
+History
+-------
+
+* Initial work on the addon for the 2017 Friendica Hackathon in Berlin
 
 License
 -------
