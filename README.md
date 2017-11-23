@@ -1,4 +1,4 @@
-rot13 addmon for Friendica
+rot13 addon for Friendica
 ==========================
 
 **Do not use this addon for anythin serious!**
