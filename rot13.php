@@ -49,9 +49,11 @@ function rot13_post_local(&$a, &$b) {
 		return;
 	}
 
-	$rot13_enable = (($rot13_post && x($_REQUEST, 'rot13_enable')) ? intval($_REQUEST['rot13_enable']) : 0);
+	$rot13_enable = ((x($_REQUEST, 'rot13_enable')) ? intval($_REQUEST['rot13_enable']) : 0);
 
 	if (!$rot13_enable) {
 		return;
 	}
+  // finally apply the ROT13	
+	$b['body'] = str_rot13($b['body']);
 }
